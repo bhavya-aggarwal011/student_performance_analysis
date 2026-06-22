@@ -161,59 +161,42 @@ app.layout = html.Div(
                 ),
 
                 # INSIGHT CARDS
-                html.P('Top 5 Insights', style=SECTION_STYLE),
-                html.Div(
-                    style={'display': 'grid',
-                           'gridTemplateColumns': 'repeat(auto-fit,minmax(220px,1fr))',
-                           'gap': '16px', 'marginBottom': '24px'},
-                    children=[
-                        html.Div(style={**CARD_STYLE, 'borderTop': '4px solid #4C72B0',
-                                        'padding': '18px', 'marginBottom': '0'}, children=[
-                            html.P('💡 Study Hours — Top Predictor',
-                                   style={'fontSize': '13px', 'color': '#555', 'marginBottom': '6px'}),
-                            html.P('r = +0.563', style={'fontSize': '22px', 'fontWeight': '700',
-                                                         'color': '#1a237e', 'margin': '0'}),
-                            html.P('+2.6 score per extra study hour',
-                                   style={'fontSize': '12px', 'color': '#888', 'marginTop': '6px'})
-                        ]),
-                        html.Div(style={**CARD_STYLE, 'borderTop': '4px solid #2ecc71',
-                                        'padding': '18px', 'marginBottom': '0'}, children=[
-                            html.P('💡 Attendance Gap',
-                                   style={'fontSize': '13px', 'color': '#555', 'marginBottom': '6px'}),
-                            html.P('17% gap', style={'fontSize': '22px', 'fontWeight': '700',
-                                                      'color': '#1a237e', 'margin': '0'}),
-                            html.P('High vs Low attendance placement rate',
-                                   style={'fontSize': '12px', 'color': '#888', 'marginTop': '6px'})
-                        ]),
-                        html.Div(style={**CARD_STYLE, 'borderTop': '4px solid #e74c3c',
-                                        'padding': '18px', 'marginBottom': '0'}, children=[
-                            html.P('💡 Internet Hurts Performance',
-                                   style={'fontSize': '13px', 'color': '#555', 'marginBottom': '6px'}),
-                            html.P('r = -0.152', style={'fontSize': '22px', 'fontWeight': '700',
-                                                         'color': '#1a237e', 'margin': '0'}),
-                            html.P('Only negative predictor in dataset',
-                                   style={'fontSize': '12px', 'color': '#888', 'marginTop': '6px'})
-                        ]),
-                        html.Div(style={**CARD_STYLE, 'borderTop': '4px solid #e67e22',
-                                        'padding': '18px', 'marginBottom': '0'}, children=[
-                            html.P('💡 Assignments = Placement',
-                                   style={'fontSize': '13px', 'color': '#555', 'marginBottom': '6px'}),
-                            html.P('27% gap', style={'fontSize': '22px', 'fontWeight': '700',
-                                                      'color': '#1a237e', 'margin': '0'}),
-                            html.P('Low vs Very High assignment completion',
-                                   style={'fontSize': '12px', 'color': '#888', 'marginTop': '6px'})
-                        ]),
-                        html.Div(style={**CARD_STYLE, 'borderTop': '4px solid #8e44ad',
-                                        'padding': '18px', 'marginBottom': '0'}, children=[
-                            html.P('💡 Star Student Profile',
-                                   style={'fontSize': '13px', 'color': '#555', 'marginBottom': '6px'}),
-                            html.P('100% placed', style={'fontSize': '22px', 'fontWeight': '700',
-                                                          'color': '#1a237e', 'margin': '0'}),
-                            html.P('Study>=8 + Attend>=80% + Internet<=4hrs',
-                                   style={'fontSize': '12px', 'color': '#888', 'marginTop': '6px'})
-                        ]),
-                    ]
-                ),
+                # ── INSIGHT CARDS ────────────────────────────────────────────────
+html.P('Top 5 Insights', style=SECTION_STYLE),
+html.Div(
+    style={
+        'display': 'grid',
+        'gridTemplateColumns': 'repeat(auto-fit, minmax(220px, 1fr))',
+        'gap': '16px', 'marginBottom': '24px'
+    },
+    children=[
+        html.Div(style={**CARD_STYLE, 'borderTop': '4px solid #4C72B0', 'padding': '18px', 'marginBottom': '0'}, children=[
+            html.P('💡 Study Hours — Top Predictor', style={'fontSize': '13px', 'color': '#555', 'marginBottom': '6px'}),
+            html.P('r = +0.563', style={'fontSize': '22px', 'fontWeight': '700', 'color': '#1a237e', 'margin': '0'}),
+            html.P('+2.6 score per extra study hour', style={'fontSize': '12px', 'color': '#888', 'marginTop': '6px'})
+        ]),
+        html.Div(style={**CARD_STYLE, 'borderTop': '4px solid #2ecc71', 'padding': '18px', 'marginBottom': '0'}, children=[
+            html.P('💡 Attendance Gap', style={'fontSize': '13px', 'color': '#555', 'marginBottom': '6px'}),
+            html.P('17% gap', style={'fontSize': '22px', 'fontWeight': '700', 'color': '#1a237e', 'margin': '0'}),
+            html.P('High vs Low attendance placement rate', style={'fontSize': '12px', 'color': '#888', 'marginTop': '6px'})
+        ]),
+        html.Div(style={**CARD_STYLE, 'borderTop': '4px solid #e74c3c', 'padding': '18px', 'marginBottom': '0'}, children=[
+            html.P('💡 Internet Hurts Performance', style={'fontSize': '13px', 'color': '#555', 'marginBottom': '6px'}),
+            html.P('r = -0.152', style={'fontSize': '22px', 'fontWeight': '700', 'color': '#1a237e', 'margin': '0'}),
+            html.P('Only negative predictor in dataset', style={'fontSize': '12px', 'color': '#888', 'marginTop': '6px'})
+        ]),
+        html.Div(style={**CARD_STYLE, 'borderTop': '4px solid #e67e22', 'padding': '18px', 'marginBottom': '0'}, children=[
+            html.P('💡 Assignments = Placement', style={'fontSize': '13px', 'color': '#555', 'marginBottom': '6px'}),
+            html.P('27% gap', style={'fontSize': '22px', 'fontWeight': '700', 'color': '#1a237e', 'margin': '0'}),
+            html.P('Low vs Very High assignment completion', style={'fontSize': '12px', 'color': '#888', 'marginTop': '6px'})
+        ]),
+        html.Div(style={**CARD_STYLE, 'borderTop': '4px solid #8e44ad', 'padding': '18px', 'marginBottom': '0'}, children=[
+            html.P('💡 Star Student Profile', style={'fontSize': '13px', 'color': '#555', 'marginBottom': '6px'}),
+            html.P('100% placed', style={'fontSize': '22px', 'fontWeight': '700', 'color': '#1a237e', 'margin': '0'}),
+            html.P('Study>=8 + Attend>=80% + Internet<=4hrs', style={'fontSize': '12px', 'color': '#888', 'marginTop': '6px'})
+        ]),
+    ]
+),
 
                 # CHARTS
                 html.P('Placement Overview', style=SECTION_STYLE),
