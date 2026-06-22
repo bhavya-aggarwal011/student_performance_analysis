@@ -155,7 +155,7 @@ http://127.0.0.1:8050
 
 ## Live Dashboard
 
-👉 **[Click here to view the live dashboard](https://YOUR-RENDER-URL.onrender.com)**
+👉 **[Click here to view the live dashboard](https://student-performance-analysis-dril.onrender.com)**
 
 ---
 
